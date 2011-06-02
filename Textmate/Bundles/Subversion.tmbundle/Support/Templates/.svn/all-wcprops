@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/11264/trunk/Bundles/Subversion.tmbundle/Support/Templates
+END
+Status.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/11264/trunk/Bundles/Subversion.tmbundle/Support/Templates/Status.rhtml
+END
+Commit.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/6016/trunk/Bundles/Subversion.tmbundle/Support/Templates/Commit.rhtml
+END
+Status.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/7037/trunk/Bundles/Subversion.tmbundle/Support/Templates/Status.js
+END

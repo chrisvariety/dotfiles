@@ -1,0 +1,64 @@
+8
+
+dir
+11508
+http://svn.textmate.org/trunk/Bundles/Subversion.tmbundle/Macros
+http://svn.textmate.org
+
+
+
+2006-03-22T17:59:24.372723Z
+2886
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dfb7d73b-c2ec-0310-8fea-fb051d288c6d
+
+Replace Conflict With Newer Text.plist
+file
+
+
+
+
+2009-05-04T16:41:53.000000Z
+c7ace0319b22a1b74503b8402aa20b28
+2006-03-22T17:59:24.372723Z
+2886
+chris
+
+Find Next Conflict.plist
+file
+
+
+
+
+2009-05-04T16:41:53.000000Z
+4d765dce574d26210533654a1b8b3c29
+2006-03-22T17:59:24.372723Z
+2886
+chris
+
+Replace Conflict With Older Text.plist
+file
+
+
+
+
+2009-05-04T16:41:53.000000Z
+7529a7d5b985a58eb0d3a423b474c2ac
+2006-03-22T17:59:24.372723Z
+2886
+chris
+
