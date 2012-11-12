@@ -1,15 +1,17 @@
-export PATH=/opt/local/bin:/opt/local/lib/postgresql83/bin:/opt/subversion/bin:/usr/local/mysql/bin:$HOME/local/node/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export TERM=xterm-color
 export CLASSPATH=/Users/cmcclelland/java
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export TZ='UTC'
-export CLICOLOR=1 
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-export NODE_PATH=$HOME/local/node
+export CLICOLOR=1
+
+export NODE_ENV=development
+export NODE_PATH=./lib:.
 
 alias ls='ls -G'
-alias ll='cd ~/workspace/locolocal'
+alias tm='cd ~/workspace/tastedmenu'
 alias m='mate'
+alias pryer='pry -r./config/environment'
 alias nodehist='env NODE_NO_READLINE=1 rlwrap -p Green -S "node >>> " node'
 
 g() {
@@ -25,14 +27,20 @@ g() {
         esac
     fi
 }
-export PS1="\[\e[0;32m\]\u@\h$ \[\e[1;37m\]"  # Primary prompt with user, host, and path 
+
+
+
+
+
+function parse_git_branch {
+   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+}
+export PS1="\[\e[0;32m\]\$(parse_git_branch)\W$ \[\e[1;37m\]"
+
+# export PS1="\[\e[0;32m\]\u@\h$ \[\e[1;37m\]"  # Primary prompt with user, host, and path
 # bash completion settings (actually, these are readline settings)
 bind "set completion-ignore-case on" # note: bind is used instead of setting these in .inputrc.  This ignores case in bash completion
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
