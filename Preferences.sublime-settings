@@ -1,0 +1,48 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"file_exclude_patterns":
+	[
+		"*.sassc",
+		"*.scssc",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db"
+	],
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"tmp"
+	],
+	"font_size": 12.0,
+	"git_command": "/usr/bin/git",
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"spell_check": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
