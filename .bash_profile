@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:$PATH
 export TERM=xterm-color
 export CLASSPATH=/Users/cmcclelland/java
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
@@ -11,8 +11,10 @@ export NODE_PATH=./lib:.
 alias ls='ls -G'
 alias tm='cd ~/workspace/tastedmenu'
 alias m='mate'
-alias pryer='pry -r./config/environment'
 alias nodehist='env NODE_NO_READLINE=1 rlwrap -p Green -S "node >>> " node'
+alias console='foreman run rails c'
+alias server='foreman run rails s'
+alias school_console='heroku run script/rails console -a cooking-school-production'
 
 g() {
     if [[ $# == '0' ]]; then
@@ -43,4 +45,5 @@ bind "set completion-ignore-case on" # note: bind is used instead of setting the
 bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
