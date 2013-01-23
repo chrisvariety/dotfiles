@@ -1,4 +1,6 @@
 {
+	"bold_folder_labels": true,
+	"caret_style": "phase",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"file_exclude_patterns":
@@ -41,6 +43,7 @@
 	[
 		"Vintage"
 	],
+	"scroll_past_end": true,
 	"spell_check": true,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
