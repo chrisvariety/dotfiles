@@ -2,10 +2,11 @@
 	user = chrismcc
 	token = xxx
 [user]
-	name = Chris McC
+	name = Chris McClelland
 	email = yyy
 [alias]
   # I like using the interactive mode to make complex commits
+  add = add --all
   ai = add --interactive
 
   # All the aliases relate to commits. Note that
@@ -19,12 +20,12 @@
   # amending the previous commit
   ca = commit --amend
   caa = commit -a --amend -C HEAD
-  
+
   # push shortcuts
   pp = push production master
   pd = push origin dev
   pm = push origin master
-  
+
   # reset
   ## soft resets
   r = reset
@@ -45,3 +46,7 @@
   f = fetch
   r = reset
   p = push
+[help]
+	autocorrect = 5
+[push]
+	default = simple
