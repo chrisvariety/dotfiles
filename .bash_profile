@@ -1,21 +1,20 @@
-export PATH=/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:$PATH
+export PATH=/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:/usr/local/sbin:$PATH
 export TERM=xterm-color
 export CLASSPATH=/Users/cmcclelland/java
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export TZ='UTC'
 export CLICOLOR=1
-
+export BUNDLER_EDITOR=stext
+export GOPATH=~/gocode/
 export NODE_ENV=development
 export NODE_PATH=./lib:.
 
 alias ls='ls -G'
-alias tm='cd ~/workspace/tastedmenu'
 alias m='mate'
 alias nodehist='env NODE_NO_READLINE=1 rlwrap -p Green -S "node >>> " node'
 alias console='foreman run rails c'
 alias server='foreman run rails s'
-alias school_console='heroku run script/rails console -a cooking-school-production'
-
+alias 'cd.'='cd ..'
 g() {
     if [[ $# == '0' ]]; then
         git status
@@ -46,4 +45,24 @@ bind "set bell-style none" # No bell, because it's damn annoying
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
 # export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+function gpall {
+  REMOTES=$@
+
+  # If no remotes were passed in, push to all remotes.
+  if [[ -z "$REMOTES" ]]; then
+    REM=`git remote`
+
+    # Break the remotes into an array
+    REMOTES=$(echo $REM | tr " " "\n")
+  fi
+
+  # Iterate through the array, pushing to each remote
+  for R in $REMOTES; do
+    echo "Pushing to $R..."
+    git push $R master
+  done
+}
