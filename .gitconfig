@@ -1,9 +1,6 @@
-[github]
-	user = chrismcc
-	token = xxx
 [user]
-	name = Chris McClelland
-	email = yyy
+	name = Chris McC
+	email = mcclelland.c@gmail.com
 [alias]
   # I like using the interactive mode to make complex commits
   add = add --all
@@ -25,6 +22,7 @@
   pp = push production master
   pd = push origin dev
   pm = push origin master
+  pull = pull --rebase
 
   # reset
   ## soft resets
@@ -39,7 +37,7 @@
   # shortcuts for commands
   s = status
   d = diff
-  a = add
+  a = add . --all
   co = checkout
   b = branch
   l = log
@@ -49,4 +47,19 @@
 [help]
 	autocorrect = 5
 [push]
-	default = simple
+	default = current
+[grep]
+  extendRegexp = true
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  grep = auto
+[merge "ours"]
+	driver = true
+[merge "theirs"]
+	driver = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
